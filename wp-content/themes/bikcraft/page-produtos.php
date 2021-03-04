@@ -10,14 +10,14 @@
 
 <section class="container produto_item animar-interno">
     <div class="grid-11">
-        <img src="public/img/produtos/bikcraft-passeio-1.jpg" alt="Bikcraft passeio">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/produtos/bikcraft-passeio-1.jpg" alt="Bikcraft passeio">
         <h2>Passeio</h2>
     </div>
     <div class="grid-5 produto_icone">
-        <img src="public/img/produtos/passeio.png" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/produtos/passeio.png" alt="">
     </div>
     <div class="grid-8">
-        <img src="public/img/produtos/bikcraft-passeio-2.jpg" alt="Bikcraft passeio">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/produtos/bikcraft-passeio-2.jpg" alt="Bikcraft passeio">
     </div>
     <div class="grid-8 produto_info">
         <p>No mundo atual, a contínua expansão de nossa, atividade cumpre um papel essencial na formula da gestão
@@ -33,14 +33,14 @@
 
 <section class="container produto_item">
     <div class="grid-11">
-        <img src="public/img/produtos/bikcraft-esporte-1.jpg" alt="Bikcraft esporte">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/produtos/bikcraft-esporte-1.jpg" alt="Bikcraft esporte">
         <h2>Esporte</h2>
     </div>
     <div class="grid-5 produto_icone">
-        <img src="public/img/produtos/esporte.png" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/produtos/esporte.png" alt="">
     </div>
     <div class="grid-8">
-        <img src="public/img/produtos/bikcraft-esporte-2.jpg" alt="Bikcraft passeio">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/produtos/bikcraft-esporte-2.jpg" alt="Bikcraft passeio">
     </div>
     <div class="grid-8 produto_info">
         <p>No mundo atual, a contínua expansão de nossa, atividade cumpre um papel essencial na formula da gestão
@@ -56,14 +56,14 @@
 
 <section class="container produto_item animar">
     <div class="grid-11">
-        <img src="public/img/produtos/bikcraft-retro-1.jpg" alt="Bikcraft Retro">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/produtos/bikcraft-retro-1.jpg" alt="Bikcraft Retro">
         <h2>Retro</h2>
     </div>
     <div class="grid-5 produto_icone">
-        <img src="public/img/produtos/retro.png" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/produtos/retro.png" alt="">
     </div>
     <div class="grid-8">
-        <img src="public/img/produtos/bikcraft-retro-2.jpg" alt="Bikcraft Retro">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/produtos/bikcraft-retro-2.jpg" alt="Bikcraft Retro">
     </div>
     <div class="grid-8 produto_info">
         <p>No mundo atual, a contínua expansão de nossa, atividade cumpre um papel essencial na formula da gestão

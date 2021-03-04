@@ -28,14 +28,14 @@
     </div>
 
     <div class="grid-16 foto-equipe">
-        <img src="public/img/equipe-bikcraft.jpg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/public/img/equipe-bikcraft.jpg" alt="">
     </div>
 
 </section>
 
 <section class="qualidade container">
     <h2 class="subtitulo">Qualidade</h2>
-    <img src="public/img/bikcraft-qualidade.png" alt="Bikcraft">
+    <img src="<?php echo get_template_directory_uri(); ?>/public/img/bikcraft-qualidade.png" alt="Bikcraft">
     <ul class="qualidade_lista">
         <li class="grid-1-3">
             <h3>Durabilidade</h3>
