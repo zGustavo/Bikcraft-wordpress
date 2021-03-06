@@ -55,11 +55,6 @@ get_header();
             <div class="container">
                 <h2 class="subtitulo">Portfólio</h2>
                 <?php include(TEMPLATEPATH . "/public/inc/clientes-portfolio.php"); ?>
-
-                <div class="call">
-                    <p><?php the_field('chamada_portfolio'); ?> </p>
-                    <a href="/bikcraftwp/portfolio/" class="btn">Portfólio</a>
-                </div>
             </div>
         </section>
 
