@@ -9,32 +9,15 @@ get_header();
 
         <section class="container animar-interno">
             <ul class="rslides">
+            <?php if(have_rows('quote_portfolio')): while(have_rows('quote_portfolio')) : the_row(); ?>                
                 <li>
                     <blockquote class="quote_clientes">
-                        <p>"No mundo atual, a contínua expansão de nossa atividade cumpre um papel
-                            essencial na formulação da gestão inovadora da qual fazermos parte.""
-                        </p>
-                        <cite>Barbara Moss</cite>
+                        <?php the_sub_field('quote'); ?>
+                        <cite><?php the_sub_field('nome_quote'); ?></cite>
                     </blockquote>
                 </li>
+            <?php endwhile; else : endif; ?>
 
-                <li>
-                    <blockquote class="quote_clientes">
-                        <p>"No mundo atual, a contínua expansão de nossa atividade cumpre um papel
-                            essencial na formulação da gestão inovadora da qual fazermos parte.""
-                        </p>
-                        <cite>João Fibi</cite>
-                    </blockquote>
-                </li>
-
-                <li>
-                    <blockquote class="quote_clientes">
-                        <p>"No mundo atual, a contínua expansão de nossa atividade cumpre um papel
-                            essencial na formulação da gestão inovadora da qual fazermos parte.""
-                        </p>
-                        <cite>Maria Fon</cite>
-                    </blockquote>
-                </li>
             </ul>
         </section>
 
