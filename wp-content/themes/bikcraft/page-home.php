@@ -50,6 +50,7 @@ get_header();
             </div>
 
         </section>
+        <!-- Fecha Produtos -->
 
         <section class="portfolio">
             <div class="container">
