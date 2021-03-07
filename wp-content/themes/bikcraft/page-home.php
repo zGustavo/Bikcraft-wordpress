@@ -8,7 +8,7 @@ get_header();
             <div class="container">
                 <h1> <?php the_field('titulo_introducao'); ?> </h1>
                 <blockquote class="quote-externo">
-                    <p><?php the_field('quote-introducao'); ?> </p>
+                    <p><?php the_field('quote_introducao'); ?> </p>
                     <cite><?php the_field('citacao_introducao'); ?> </cite>
                 </blockquote>
                 <a href="/bikcraftwp/produtos/" class="btn">Orçamento</a>

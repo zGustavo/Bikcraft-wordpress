@@ -9,14 +9,20 @@ Version: 1.0
 
 
 /* Importando CSS */
-@import 'public/style/reset.css';
 @import 'public/style/normalize.css';
+@import 'public/style/reset.css';
 @import 'public/style/grid.css';
 @import 'public/style/sobre.css';
 @import 'public/style/produtos.css';
 @import 'public/style/portifolio.css';
 @import 'public/style/contato.css';
 @import 'public/style/responsivo.css';
+
+/* ESTILOS ADM WORDPRESS */
+
+.customize-support .header {
+    margin-top: 32px;
+}
 
 
 /* Estilos gerais */
