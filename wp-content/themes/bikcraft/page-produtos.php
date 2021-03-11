@@ -7,6 +7,20 @@
 
 <?php include(TEMPLATEPATH . "/public/inc/introducao.php"); ?>
 
+<?php
+    $args = array(
+        'post_type' => 'produtos',
+        'order' => 'ASC'
+    );
+    $the_query = new WP_Query ($args);
+ ?>
+
+ <?php if($the_query->have_posts() ): while ($the_query->have_posts() ): $the_query->the_post(); ?>
+    <h1><?php the_title(); ?></h1>
+
+<?php endwhile; else: endif; ?>
+
+
 
 <section class="container produto_item animar-interno">
     <div class="grid-11">
