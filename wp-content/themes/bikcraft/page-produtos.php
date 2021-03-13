@@ -31,6 +31,9 @@ get_header();
         <?php endwhile;
         else : endif; ?>
 
+        <!-- Reset Loop WP -->
+        <?php wp_reset_query(); wp_reset_postdata(); ?>
+
         <?php include(TEMPLATEPATH . "/public/inc/produtos-orcamento.php"); ?>
 
 

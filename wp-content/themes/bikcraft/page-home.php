@@ -5,25 +5,25 @@ get_header();
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<?php 
-    $imagem_id = get_field('background_home');
-    $background_large = wp_get_attachment_image_src($imagem_id, 'large');
-    $background_medium = wp_get_attachment_image_src($imagem_id, 'medium');
-?>
+        <?php
+        $imagem_id = get_field('background_home');
+        $background_large = wp_get_attachment_image_src($imagem_id, 'large');
+        $background_medium = wp_get_attachment_image_src($imagem_id, 'medium');
+        ?>
 
-<style type="text/css">
-    .introducao {
-        background: url('<?php echo $background_large[0] ?>') no-repeat center;
-        background-size: cover;
-    }
+        <style type="text/css">
+            .introducao {
+                background: url('<?php echo $background_large[0] ?>') no-repeat center;
+                background-size: cover;
+            }
 
-    @media only screen and (max-width: 767px) {
-        .introducao {
-             background: url('<?php echo $background_medium[0] ?>') no-repeat center;
-             background-size: cover;
-        }
-    }
-</style>
+            @media only screen and (max-width: 767px) {
+                .introducao {
+                    background: url('<?php echo $background_medium[0] ?>') no-repeat center;
+                    background-size: cover;
+                }
+            }
+        </style>
 
         <section class="introducao">
             <div class="container">
@@ -39,29 +39,31 @@ get_header();
         <section class="produtos container animar">
             <h2 class="subtitulo">Produtos</h2>
             <ul class="produtos_lista">
-                <li class="grid-1-3">
-                    <div class="produtos_icone">
-                        <img src="<?php echo get_template_directory_uri(); ?>/public/img/produtos/passeio.png" alt="Bikcraft Passeio">
-                    </div>
-                    <h3>Passeio</h3>
-                    <p>Ainda assim, existem dúvidas a respeito de como a necessidade de renovação</p>
-                </li>
 
-                <li class="grid-1-3">
-                    <div class="produtos_icone">
-                        <img src="<?php echo get_template_directory_uri(); ?>/public/img/produtos/esporte.png" alt="Bikcraft esporte">
-                    </div>
-                    <h3>Esporte</h3>
-                    <p>Ainda assim, existem dúvidas a respeito de como a necessidade de renovação</p>
-                </li>
+                <?php
+                $args = array(
+                    'post_type' => 'produtos',
+                    'order' => 'ASC'
+                );
+                $the_query = new WP_Query($args);
+                ?>
 
-                <li class="grid-1-3">
-                    <div class="produtos_icone">
-                        <img src="<?php echo get_template_directory_uri(); ?>/public/img/produtos/retro.png" alt="Bikcraft retro">
-                    </div>
-                    <h3>Retro</h3>
-                    <p>Ainda assim, existem dúvidas a respeito de como a necessidade de renovação</p>
-                </li>
+                <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
+
+                        <li class="grid-1-3">
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="produtos_icone">
+                                    <img src="<?php the_field('icone_produto'); ?>" alt="Bikcraft <?php the_title(); ?>">
+                                </div>
+                                <h3><?php the_title(); ?></h3>
+                                <p><?php the_field('resumo_produto'); ?></p>
+                            </a>
+                        </li>
+
+                <?php endwhile;
+                else : endif; ?>
+                <!-- Reset do Loop -->
+                <?php wp_reset_query(); wp_reset_postdata(); ?>
 
             </ul>
 
