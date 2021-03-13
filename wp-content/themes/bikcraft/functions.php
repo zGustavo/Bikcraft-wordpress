@@ -15,6 +15,12 @@ remove_action('admin_print_styles', 'print_emoji_styles');
 // Habilitar Menus
 add_theme_support('menus');
 
+// Registrar Menu
+function register_my_menu() {
+    register_nav_menu('header-menu', __( 'Header Menu'));
+}
+add_action('init', 'register_my_menu');
+
 // Padronizar tamanho das imagens quando upadas
 // Custom Images Size
 function my_custom_sizes() {
