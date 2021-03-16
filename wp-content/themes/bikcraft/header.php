@@ -32,20 +32,14 @@
                 </a>
 
                 <nav class="grid-12 header_menu">
-                    <ul>
-                        <li>
-                            <a href="/bikcraftwp/sobre/">Sobre</a>
-                        </li>
-                        <li>
-                            <a href="/bikcraftwp/produtos/">Produtos</a>
-                        </li>
-                        <li>
-                            <a href="/bikcraftwp/portfolio/">Portfólio</a>
-                        </li>
-                        <li>
-                            <a href="/bikcraftwp/contato/">Contato</a>
-                        </li>
-                    </ul>
+                    <?php 
+                        $args = array(
+                            'menu' => 'principal',
+                            'theme_location' => 'menu-principal',
+                            'container' => false
+                        );
+                        wp_nav_menu( $args );
+                    ?>
                 </nav>
             </div>
         </header>
