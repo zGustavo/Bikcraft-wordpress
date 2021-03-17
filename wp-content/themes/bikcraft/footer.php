@@ -49,10 +49,7 @@
 </footer>
 
 <!--   JQuery   -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- JavaScript-->
-<script src="<?php echo get_template_directory_uri(); ?>/public/js/plugins.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/public/js/main.js"></script>
+
 
 <!--Inicio Wordpress Footer-->
 <?php wp_footer(); ?>

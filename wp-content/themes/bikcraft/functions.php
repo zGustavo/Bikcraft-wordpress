@@ -1,5 +1,26 @@
 <?php
 
+// Função para registrar os Scripts e o CSS
+function bikcraft_scripts() {
+    //Desregistrar o JQuery do Wordpress
+    wp_deregister_script('jquery');
+
+    //Registrar JQuery local (*NOVO)
+    wp_register_script('jquery', get_template_directory_uri() . '/public/js/libs/jquery-3.5.1.min.js',
+    array(), "3.5.1", true);
+
+    //Registrar Plugins
+    wp_register_script('plugins-script', get_template_directory_uri() . '/public/js/plugins.js', array('jquery'), false, true );
+    //Registrar Main
+    wp_register_script('main-script', get_template_directory_uri() . '/public/js/main.js', array('jquery', 'plugins-script'), false, true);
+
+    // Carrega o Script
+    wp_enqueue_script('main-script');
+
+}
+add_action('wp_enqueue_scripts', 'bikcraft_scripts' );
+
+
 // Funções para Limpar o Header
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
