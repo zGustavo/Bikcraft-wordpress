@@ -15,8 +15,6 @@
         <meta property="og:image" content="http://bikcraft.com/img/op-image.png">
 
         <link rel="shortcut icon" href="favicon.ico">
-
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
         
         <!--Inicio Wordpress Header-->
         <?php wp_head(); ?>

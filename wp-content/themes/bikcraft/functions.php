@@ -20,6 +20,12 @@ function bikcraft_scripts() {
 }
 add_action('wp_enqueue_scripts', 'bikcraft_scripts' );
 
+function bikcraft_css() {
+    wp_register_style('bikcraft-style', get_template_directory_uri() . '/style.css', array(), false, false);
+    wp_enqueue_style('bikcraft-style');
+}
+add_action('wp_enqueue_scripts', 'bikcraft_css');
+
 
 // Funções para Limpar o Header
 remove_action('wp_head', 'rsd_link');
