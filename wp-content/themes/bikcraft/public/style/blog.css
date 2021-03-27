@@ -2,3 +2,15 @@
 .introducao-blog {
     background: #000;
 }
+
+.blog-container {
+    padding: 40px 0;
+}
+
+.blog-post:nth-of-type(odd) {
+    background: #FEC63E;
+}
+
+.blog-post a {
+    font-size: 20px;
+}
